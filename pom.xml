@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.1.2</version>
+<!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+    </parent>
+    <groupId>com.tinqin.bff</groupId>
+    <artifactId>BFF</artifactId>
+    <version>${revision}</version>
+    <name>BFF</name>
+    <description>BFF</description>
+    <packaging>pom</packaging>
+    <properties>
+        <revision>0.0.5-SNAPSHOT</revision>
+        <zoostore.version>0.0.3-SNAPSHOT</zoostore.version>
+        <storage.version>0.0.5-SNAPSHOT</storage.version>
+        <spring-security.version>6.1.2</spring-security.version>
+        <java.version>17</java.version>
+    </properties>
+    <modules>
+        <module>api</module>
+        <module>core</module>
+        <module>domain</module>
+        <module>rest</module>
+        <module>persistence</module>
+    </modules>
+
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>1.2.7</version>
+                <configuration>
+                </configuration>
+                <executions>
+                    <!-- enable flattening -->
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <!-- ensure proper cleanup -->
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.tinqin.bff</groupId>
+        <artifactId>BFF</artifactId>
+        <version>${revision}</version>
+        <!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+    </parent>
+
+    <artifactId>domain</artifactId>
+    <version>${revision}</version>
+    <name>domain</name>
+    <description>domain</description>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.zoostore.storage</groupId>
+            <artifactId>restexport</artifactId>
+            <version>${storage.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.example.zoostore</groupId>
+            <artifactId>restexport</artifactId>
+            <version>${zoostore.version}</version>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>4.0.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.openfeign.form</groupId>
+            <artifactId>feign-form</artifactId>
+            <version>3.8.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.openfeign.form</groupId>
+            <artifactId>feign-form-spring</artifactId>
+            <version>3.8.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-jackson</artifactId>
+            <version>12.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zoostore.storage</groupId>
+            <artifactId>restexport</artifactId>
+            <version>${storage.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>tinqin-storage-repo</id>
+            <name>Tinqin Storage Repo</name>
+            <url>file:://C:/Users/user/.m2/repository/com/example/storage</url>
+        </repository>
+        <repository>
+            <id>tinqin-zoostore-repo</id>
+            <name>Tinqin Zoostore Repo</name>
+            <url>file:://C:/Users/user/.m2/repository/com/example/zoostore</url>
+        </repository>
+    </repositories>
+
+
+</project>
